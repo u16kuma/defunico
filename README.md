@@ -1,8 +1,6 @@
 # DefUniCo
 
-DefUniCoはDefoldで使われることを想定したコルーチンのライブラリです。  
 DefUniCo is a coroutine library for Defold game engine.  
-Defold上でUnityライクにコルーチンを使用したい場合にとても役に立ちます。  
 The library is useful when you want to write coroutine like Unity3D in Defold.  
 
 # Installation
@@ -12,7 +10,7 @@ Open your game.project file and in the dependencies field under project add:
 
 // TODO: zipのパス
 
-Or point to the ZIP file of a [パスを追加する specific DefUniCo release](https://github.com/ぱす/releases).  
+Or point to the ZIP file of a [specific DefUniCo release](https://github.com/u16kuma/defunico/releases).  
 
 # Usage
 
