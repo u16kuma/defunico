@@ -1,0 +1,40 @@
+local defunico = require("defunico.defunico")
+
+function init(self)
+	defunico.init(self)
+	self.start_coroutine(function(self)
+		print("coroutine start")
+		
+		print("wait_next_frame")
+		wait_next_frame()
+
+		print("wait_frame")
+		wait_frame(60)
+
+		print("wait_seconds")
+		wait_seconds(1.0)
+
+		print("wait_msec")
+		wait_msec(1000)
+
+		print("wait_until")
+		local value = 0
+		wait_until(function()
+			value = value + 1
+			return value >= 60
+		end)
+
+		print("wait_while")
+		value = 0
+		wait_while(function()
+			value = value + 1
+			return value >= 60
+		end)
+
+		print("coroutine end")
+	end)
+end
+
+function update(self, dt)
+	self.update_coroutine(dt)
+end
