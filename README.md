@@ -8,7 +8,9 @@ The library is useful when you want to write coroutine like Unity3D in Defold.
 You can use DefUniCo in your own project by adding this project as a [Defold library dependency](https://www.defold.com/manuals/libraries/).  
 Open your game.project file and in the dependencies field under project add:  
 
-// TODO: zipのパス
+```
+https://github.com/u16kuma/defunico/archive/1.0.zip
+```
 
 Or point to the ZIP file of a [specific DefUniCo release](https://github.com/u16kuma/defunico/releases).  
 
