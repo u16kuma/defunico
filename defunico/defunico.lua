@@ -23,6 +23,8 @@ function defunico.init(self)
 				status, wait_type, wait_value = coroutine.resume(co_ins, instance)
 				if status then
 					is_waiting = true
+				else
+					print(debug.traceback(co_ins, wait_type))
 				end
 			end
 
