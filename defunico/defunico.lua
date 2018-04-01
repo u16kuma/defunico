@@ -97,4 +97,9 @@ end
 function wait_frame(frame)
 	coroutine.yield(WAIT_TYPE_FRAME, frame)
 end
+function wait_infinite()
+	while true do
+		wait_next_frame()
+	end
+end
 return defunico
