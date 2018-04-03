@@ -16,3 +16,6 @@ shared_state = 1
 [library]
 include_dirs = defunico
 
+[bootstrap]
+main_collection = /example/main.collectionc
+

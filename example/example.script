@@ -2,8 +2,23 @@ local defunico = require("defunico.defunico")
 
 function init(self)
 	defunico.init(self)
+
+	msg.post(".", "acquire_input_focus")
+	
 	self.start_coroutine(function(self)
 		print("coroutine start")
+
+		print("wait_until_input")
+		local input_pack = self.wait_until_input(function(action_id, action)
+			return action_id == hash("touch")
+		end)
+		pprint(input_pack)
+
+		print("wait_until_message")
+		local msg_pack = self.wait_until_message(function(message_id, message, sender)
+			return message_id == hash("update")
+		end)
+		pprint(msg_pack)
 		
 		print("wait_next_frame")
 		wait_next_frame()
@@ -37,4 +52,14 @@ end
 
 function update(self, dt)
 	self.update_coroutine(dt)
+end
+
+function on_input(self, action_id, action)
+	self.on_input_coroutine(action_id, action)
+
+	msg.post(".", "update")
+end
+
+function on_message(self, message_id, message, sender)
+	self.on_message_coroutine(message_id, message, sender)
 end
