@@ -9,7 +9,7 @@ You can use DefUniCo in your own project by adding this project as a [Defold lib
 Open your game.project file and in the dependencies field under project add:  
 
 ```
-https://github.com/u16kuma/defunico/archive/1.0.zip
+https://github.com/u16kuma/defunico/archive/master.zip
 ```
 
 Or point to the ZIP file of a [specific DefUniCo release](https://github.com/u16kuma/defunico/releases).  
