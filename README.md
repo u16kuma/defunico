@@ -82,5 +82,15 @@ self.start_coroutine(function(self)
         return frame <= 60
     end)
 
+    -- need to write self.on_input_coroutine to on_input
+    local input_pack = self.wait_until_input(function(action_id, action)
+        return action_id == hash("touch")
+    end)
+
+    -- need to write self.on_message_coroutine to on_message
+    local msg_pack = self.wait_until_message(function(message_id, message, sender)
+        return message_id == hash("update")
+    end)
+
 end)
 ```
